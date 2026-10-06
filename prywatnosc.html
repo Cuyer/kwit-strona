@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności Kwita</title>
+<meta name="description" content="Jakie dane czyta Kwit, gdzie je trzyma i komu je przekazuje.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Polityka prywatności Kwita</h1>
+<p class="meta">Obowiązuje od 6 października 2026.</p>
+
+<h2>Kim jest użytkownik</h2>
+<p>Kwit to prywatna aplikacja na macOS. Ma jednego użytkownika: swojego właściciela, autora konta <a href="https://github.com/Cuyer">github.com/Cuyer</a>. Nie jest rozpowszechniana i nie ma kont innych osób.</p>
+
+<h2>Jakie dane Google czyta Kwit</h2>
+<p>Kwit prosi tylko o te uprawnienia, których potrzebują jego funkcje:</p>
+<ul>
+<li><strong>AdMob</strong> (<code>admob.readonly</code>): raporty zarobków z aplikacji właściciela, tylko do odczytu.</li>
+<li><strong>Google Cloud Storage</strong> (<code>devstorage.read_only</code>): miesięczne raporty Google Play z zasobnika dewelopera, tylko do odczytu.</li>
+<li><strong>Gmail</strong> (<code>gmail.readonly</code>): wiadomości z jednej etykiety z fakturami od dostawców usług, żeby odczytać kwoty i pliki faktur. Kwit nie wysyła poczty, niczego w niej nie zmienia i nie czyta innych wiadomości.</li>
+<li><strong>Dysk Google</strong> (<code>drive.file</code>): tylko pliki, które Kwit sam utworzył, czyli zaszyfrowane kopie archiwum. Innych plików na Dysku Kwit nie widzi.</li>
+</ul>
+
+<h2>Gdzie zostają dane</h2>
+<p>Wszystko, co Kwit odczyta, zostaje na Macu właściciela, w archiwum aplikacji. Kopia na Dysku Google jest szyfrowana na Macu, zanim cokolwiek zostanie wysłane, kluczem, który zna tylko właściciel. Google przechowuje wyłącznie zaszyfrowany plik.</p>
+
+<h2>Komu Kwit przekazuje dane</h2>
+<p>Nikomu poza urzędami, do których właściciel składa dokumenty: Krajowy System e-Faktur i bramka e-Deklaracji Ministerstwa Finansów. Kwit pobiera też kursy walut z Narodowego Banku Polskiego, nie wysyłając tam żadnych danych osobowych. Kwit nie ma własnych serwerów, reklam ani analityki i nie sprzedaje danych.</p>
+
+<h2>Zasady Google</h2>
+<p>Korzystanie przez Kwita z informacji otrzymanych z interfejsów API Google i ich przekazywanie spełnia <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, w tym wymagania Limited Use. Dane z Gmaila służą tylko funkcjom Kwita dla jego właściciela i nie są używane do reklam ani do trenowania modeli.</p>
+
+<h2>Jak długo</h2>
+<p>Archiwum zostaje tak długo, jak wymaga prawo podatkowe: dokumenty VAT do upływu przedawnienia, czyli 5 lat od końca roku, w którym minął termin płatności podatku.</p>
+
+<h2>Jak cofnąć dostęp</h2>
+<p>W Kwicie: Ustawienia › Źródła › Rozłącz. W koncie Google: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Kopie na Dysku można usunąć z folderu „Kwit – kopie archiwum”.</p>
+
+<h2>Kontakt</h2>
+<p>Przez <a href="https://github.com/Cuyer">github.com/Cuyer</a>.</p>
+
+<hr>
+
+<h2>In English</h2>
+<p>Kwit is a private macOS app with a single user, its owner. It reads AdMob earnings reports (<code>admob.readonly</code>), Google Play monthly reports from the developer's Cloud Storage bucket (<code>devstorage.read_only</code>), and supplier invoices from one Gmail label (<code>gmail.readonly</code>), and it stores encrypted copies of its own archive on Google Drive (<code>drive.file</code>, only files Kwit created). All data stays on the owner's Mac; Drive copies are encrypted on the Mac before upload with a key only the owner holds. Data goes nowhere except the Polish tax authorities' systems the owner files with. No servers, ads, analytics or data sales.</p>
+<p>Kwit's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<nav>
+<a href="./">Kwit</a> · Kontakt: <a href="https://github.com/Cuyer">github.com/Cuyer</a>
+</nav>
+</main>
+</body>
+</html>
